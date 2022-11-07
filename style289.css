@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+}
+
+body,
+html {
+    width: 100vw;
+    height: 100vh;
+    font-family: Helvetica Neue;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(193, 52, 52); */
+    background: linear-gradient(rgba(43, 245, 201, 0.5), rgb(5, 101, 113, 0.5));
+    padding-top: 2vh;
+    overflow: hidden;
+
+}
+
+.disp {
+    /* position: fixed; */
+    position: relative;
+    width: 30vw;
+    height: 96vh;
+    margin-left: 35vw;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* overflow-y: hidden; */
+}
+
+.disp::-webkit-scrollbar {
+    display: none;
+}
+
+.disp>h3 {
+    margin: 5%;
+}
+
+.wtsp {
+    width: 100%;
+    height: 6.5vw;
+    color: #fff;
+    position: sticky;
+    top: -7%;
+    z-index: 9999999999999;
+    background-color: #128c7e;
+}
+
+.top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vw 2vw 1vw;
+}
+
+
+.l1 {
+    width: 30%;
+    font-size: 1.5vw;
+    font-family: "Roboto Mono";
+    font-weight: 500;
+
+}
+
+.r1 {
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 14%;
+}
+
+.down {
+    width: 95%;
+    display: flex;
+    margin-top: .1vw;
+    /* margin-left: .5vw; */
+    margin-right: .5vw;
+    margin-bottom: .5vw;
+    padding: .35vw 1vw;
+    font-size: 1.3vw;
+    font-family: 'monospace';
+    justify-content: space-between;
+}
+
+.down>h5 {
+    padding: 0 1vw;
+    cursor: pointer;
+}
+
+#chat {
+
+    border-bottom: 4px solid white;
+}
+
+
+
+/* chat feature */
+
+
+.chatfeature {
+
+    display: block;
+}
+
+.chat {
+    display: flex;
+    height: 50px;
+    overflow: hidden;
+    margin: 4% 2%;
+    gap: 3%;
+}
+
+.chat>.dp {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.box {
+    display: flex;
+    width: 90%;
+    /* background-color: red; */
+    justify-content: space-between;
+}
+
+.content {
+    flex-shrink: 0;
+    width: 60%;
+}
+
+.content>h1 {
+    font-size: 1.3vw;
+    font-weight: normal;
+}
+
+.content>h5 {
+    font-size: 1vw;
+    margin: 2% 0%;
+    color: rgba(0, 0, 0, 0.738);
+    font-weight: 500;
+}
+
+.time {
+    font-size: .8vw;
+    color: #25D366;
+}
+
+
+
+
+
+
+
+
+
+/* ======================== */
+/* statusfeature */
+/* ======================== */
+
+.statusfeature {
+    display: none;
+    padding-left: 3%;
+}
+
+.status {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    padding: 0 1%;
+    margin: 2.5% 0%;
+
+}
+
+.statusfeature>h4 {
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.dp {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgb(9, 174, 34);
+}
+
+.dp>img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.disc {
+    margin-left: 5%;
+    padding: 3% 0%;
+}
+
+.disc>h3 {
+    font-size: 1.3vw;
+    font-weight: 500;
+}
+
+.disc>p {
+    font-size: .9vw;
+    opacity: .9;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ======================== */
+/* calling feature */
+/* ======================== */
+.callingfeature {
+    display: none;
+}
+
+.call {
+    display: flex;
+    height: 50px;
+    overflow: hidden;
+    margin: 4% 2%;
+    gap: 7%;
+}
+
+.call>.dp {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+}
+
+.call>.content {
+    flex-shrink: 0;
+    width: 60%;
+}
+
+.call .content>h1 {
+    font-size: 1.4vw;
+    text-transform: capitalize;
+
+}
+
+.ri-arrow-left-down-line {
+    font-size: 1.2vw;
+    color: rgb(236, 11, 11);
+}
+
+.ri-arrow-right-up-line {
+    font-size: 1.2vw;
+    color: green;
+}
+
+.call .content>h6 {
+    font-size: 1vw;
+    font-weight: 500;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+
+}
+
+.type i {
+    font-size: 1.2vw;
+    color: green;
+    padding-right: 1vw;
+}
+
+/* open status */
+
+.full-scr {
+    width: 30%;
+    height: 96%;
+    border-radius: 10px;
+    display: none;
+    position: fixed;
+    /* overflow: hidden; */
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.growths {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 2%;
+    background-color: #dadadae1;
+}
+
+.growth {
+    height: 4px;
+    width: 100%;
+    background-color: white;
+}
+
+/* open status */
+
+@media screen and (max-width:1200px) and (min-width:650px) {
+    .main {
+        padding-top: 0;
+    }
+
+    .disp {
+        width: 50vw;
+        height: 100vh;
+        margin-left: 25vw;
+        border-radius: 0;
+
+    }
+
+    .disp {
+        width: 50vw;
+        height: 100vh;
+        margin-left: 0vw;
+        border-radius: 0;
+
+    }
+
+    .full-scr {
+        width: 50%;
+        height: 100%;
+        border-radius: 10px;
+        display: none;
+        position: fixed;
+        /* overflow: hidden; */
+        z-index: 99;
+        background-size: cover;
+        background-position: center;
+        background-color: rgb(0, 0, 0);
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .main {
+        padding-top: 0;
+    }
+
+    .disp {
+        width: 100vw;
+        height: 100vh;
+        margin-left: 0vw;
+        border-radius: 0;
+
+    }
+
+    .wtsp {
+        height: 22vw;
+
+    }
+
+    .top {
+        padding: 5.2vw 3vw 2vw;
+    }
+
+
+    .l1 {
+        width: 30%;
+        font-size: 5.5vw;
+
+
+    }
+
+    .full-scr {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: none;
+        position: fixed;
+        /* overflow: hidden; */
+        z-index: 99;
+        background-size: cover;
+        background-position: center;
+        background-color: rgb(0, 0, 0);
+    }
+
+    .r1 {
+        font-size: 4.5vw;
+        width: 14%;
+    }
+
+    .down {
+        margin: .9vw 2vw;
+        padding: .35vw 1.5vw;
+        font-size: 5vw;
+
+    }
+
+    .down>h5 {
+        padding: 0 2vw;
+    }
+
+    /* ======================== */
+
+    .chat {
+        height: 16vw;
+    }
+
+    .chat>.dp {
+        width: 55px;
+        height: 55px;
+    }
+
+    .content {
+        overflow: hidden;
+        width: 65vw;
+        height: 12vw;
+        /* background-color: red; */
+    }
+
+    .content>h1 {
+        font-size: 4.5vw;
+        font-weight: 500;
+    }
+
+    .content>h5 {
+        font-size: 3.5vw;
+    }
+
+    .time {
+        font-size: 2.8vw;
+        color: #25D366;
+    }
+
+    /* =============================== */
+
+
+
+    .statusfeature>h4 {
+        font-size: 4.3vw;
+    }
+
+    .disc>h3 {
+        font-size: 4.9vw;
+    }
+
+    .disc>p {
+        font-size: 3.7vw;
+    }
+
+    /* ================================= */
+
+    .call {
+        height: 15vw;
+
+    }
+
+    .call>.dp {
+        width: 55px;
+        height: 55px;
+    }
+
+    .call .content>h1 {
+        font-size: 4.5vw;
+    }
+
+    .call .content>h6 {
+        font-size: 3.8vw;
+    }
+
+    .call .content>h6 i {
+        font-size: 4.2vw;
+    }
+
+    .type i {
+        font-size: 4.6vw;
+        padding-right: 2vw;
+    }
+
+
+
+    /* ================================ */
+
+
+
+}
